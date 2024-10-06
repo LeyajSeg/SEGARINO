@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Warang+Citi&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: black;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative; 
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;  
+    height: 100vh; 
+    z-index: 0; 
+}
+header {
+    position: absolute;
+    background: darkred;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+img {
+    width: 200px; 
+    height: auto;
+}
+
+
+.navigation a {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 20px;
+    text-shadow:2px 2px grey;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: #FAFAFA;
+    background-color: black;
+    border-bottom: 3px solid red;
+}
+
+
+
+.logo {
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-shadow: 2px 2px red;
+}
+
+.logo:hover {
+    color: red;
+    text-shadow: 0 0 25px darkred;
+    transform: scale(1.1);
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 1; 
+}
+
+#text {
+    position: absolute;
+    font-size: 12em;
+    color: #ff073a; 
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 0.70em;
+    outline: none;
+    animation: animate 5s linear infinite;
+    z-index: 1; 
+}
+
+@keyframes animate {
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+        color: darkred;
+        text-shadow: none;
+    }
+    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+        color: #ff073a; 
+        text-shadow: 0 0 10px #ff073a,
+                     0 0 20px #ff073a,
+                     0 0 40px #ff073a,
+                     0 0 80px #ff073a,
+                     0 0 160px #ff073a;
+    }
+}
+
+section {
+    padding: 100px 10%;
+}
+
+.home {
+    min-height: 100vh;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 10%; 
+}
+
+.home-content {
+    max-width: 700px; 
+    color: white;
+    text-align: left; 
+}
+
+.img-box {
+    margin-left: 20px; 
+}
+
+.img-box img {
+    width: 700px; 
+    height: auto; 
+    border-radius: 10px; 
+}
+
+.home-content h1 {
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+.change-text {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px darkred;
+}
+
+.change-text h3 {
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+    text-shadow: 3px 3px 1px darkred;
+}
+
+.home-content p {
+    font-size: 1.5em;
+    text-shadow: 2px 2px red;
+    margin: 20px 0; 
+    text-align: justify; 
+    padding: 10px;
+    color: white; 
+}
+
+.change-text h3 .word {
+    position: absolute;
+    display: flex;
+    opacity: 0; 
+    color: red;
+    text-shadow: 0 0 5px orangered, 0 0 10px orangered, 0 0 15px orangered;
+    transition: color 0.5s ease, text-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.change-text h3 .word .letter {
+    transform-origin: center center 25px; 
+}
+
+.change-text h3 .word .letter.out {
+    transform: rotateX(90deg);
+    transition: 0.32s ease cubic-bezier(0.6, 0, 0.7, 0.2); 
+}
+
+.change-text h3 .word .letter.in {
+    transition: 0.32s ease;
+}
+
+.change-text h3 .word .letter.behind {
+    transform: rotateX(-90deg);
+}
+
+footer {
+    background-color: darkred;
+    color: black;
+    text-shadow:  1px 1px grey;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+    position: relative;
+    padding:15px 10px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hotline {
+    margin: 0;
+}
+
+.hotline a {
+    color: #FFFFFF; 
+    text-shadow: 1px 1px red;
+    text-decoration: underline; 
+}
+
+.social-icons {
+    margin-top: 2px;
+}
+
+.social-logo {
+    width: 30px; 
+    height: auto; 
+    margin: 1px;
+    transition: transform 0.3s;
+}
+
+.social-logo:hover {
+    transform: scale(1.1); 
+    ;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px; 
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .navigation a {
+        font-size: 16px; 
+    }
+
+    #text {
+        font-size: 5em; 
+    }
+}

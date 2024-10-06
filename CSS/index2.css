@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Warang+Citi&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: black;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    background: darkred;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+img {
+    width: 200px; 
+    height: auto;
+}
+
+
+.navigation a {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 20px;
+    text-shadow:2px 2px grey;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: #FAFAFA;
+    background-color: black;
+    border-bottom: 3px solid red;
+}
+
+
+
+.container .heading {
+    width: 80%;
+    padding-top:50px;
+    padding-bottom: 50px;
+    border-bottom: 3px solid darkred;
+    color: darkred;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px 20px 0 20px;
+}
+
+.container .heading h3 {
+    font-size: 3em;
+    color: darkred;
+    text-shadow: 2px 2px red;
+    margin-top: 50px;
+}
+
+.container .heading h3 span {
+    padding-bottom: 10px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 1px 1px orangered;
+}
+
+.container .box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container .box .dream {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+    padding-bottom: 20px;
+    padding-bottom: 150px;
+}
+
+
+.container .box .dream img {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid darkred;
+    cursor: pointer;
+    margin: 0; 
+    transition: 500ms;
+    
+}
+
+
+.container .box .dream .card {
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    border-radius: 5px;
+    border: 2px solid red;
+    transition: 0.5s ease;
+    
+}
+
+.container .box .dream .card img {
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+.container .box .dream .card:hover img {
+    filter: grayscale(1);
+    transform: scale(1.1);
+}
+
+.container .box .dream .card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 12px;
+    text-shadow: 2px 2px darkred;
+    padding: 10px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+}
+
+.container .box .dream .card:hover .card-info {
+    transform: translateY(0);
+}
+
+#text {
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 1em;
+    outline: none;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+        color: white;
+        text-shadow: 1px 1px orangered;
+    }
+    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+        color: red; 
+        text-shadow: 0 0 10px darkred,
+                     0 0 20px darkred,
+                     0 0 40px darkred,
+                     0 0 80px darkred,
+                     0 0 160px darkred;
+    }
+}
+@media only screen and (max-width:643x ) {
+  .container .box{
+  flex-direction:column;
+}
+.container .box .dream{
+  
+  width: 100%;
+}
+}
+
+
+@media only screen and (max-width:643x ) {
+  .container .heading{
+  width: 50%;
+}
+  .container .heading h3{
+  font-size:1em;
+  
+}
+
+}
+footer {
+    background-color: darkred;
+    color: black;
+    text-shadow:  1px 1px grey;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hotline {
+    margin: 0;
+}
+
+.hotline a {
+    color: #FFFFFF; 
+    text-shadow: 1px 1px red;
+    text-decoration: underline; 
+}
+
+.social-icons {
+    margin-top: 2px;
+}
+
+.social-logo {
+    width: 30px; 
+    height: auto; 
+    margin: 1px;
+    transition: transform 0.3s;
+}
+
+.social-logo:hover {
+    transform: scale(1.1); 
+    ;
+}
