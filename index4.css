@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: black;
+}
+
+section{
+    padding: 20px;
+    overflow: hidden;
+}
+
+section .header{
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+header {
+    position: absolute;
+    background: darkred;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+img {
+    width: 200px; 
+    height: auto;
+}
+button {
+  
+  background-color: darkred;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px
+}
+button:hover {
+  background-color: #0069d9;
+  }
+
+
+
+
+.navigation a {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 20px;
+    text-shadow:2px 2px grey;
+}
+
+#text {
+   font-size: 2em;
+    line-height: 1em;
+    outline: none;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+        color: white;
+        text-shadow: 1px 1px orangered;
+    }
+    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+        color: red; 
+        text-shadow: 0 0 10px darkred,
+                     0 0 20px darkred,
+                     0 0 40px darkred,
+                     0 0 80px darkred,
+                     0 0 160px darkred;
+    }
+}
+.navigation a:hover,
+.navigation a.active {
+    color: #FAFAFA;
+    background-color: black;
+    border-bottom: 3px solid red;
+}
+
+.header h2{
+    padding-top: 87px;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    color: white;
+    position: relative;
+}
+
+.header h2::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: black;
+    margin: auto;
+}
+
+.header p{
+    margin-bottom: 0;
+    color: white;
+}
+
+.container{
+    max-width: 1300px;
+    box-shadow: 0px 2px 25px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    transition: 0.4s all ease-in-out;
+}
+
+.quick-links {
+    padding: 40px 0;
+    background-color: black;
+    color: white;
+}
+
+.links_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.link_item {
+    display: flex;
+    align-items: center;
+    background-color: darkred;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    transition: 0.3s;
+}
+
+.link_item .icon {
+    font-size: 30px;
+    color: white;
+    margin-right: 15px;
+}
+
+.link_item .information h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.link_item .information p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.link_item a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.link_item a:hover {
+    text-decoration: underline;
+}
+
+.link_item:hover {
+    background-color: red;
+    transform: translateY(-5px);
+}
+
+.input_container{
+    max-width: 65%;
+    width: 100%;
+    padding: 30px;
+}
+form{
+  padding-top: -30px;
+}
+form .row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+form .form_control{
+    outline: none;
+    font-size: 14px;
+    padding: 12px 15px;
+    color: #212529;
+    width: 100%;
+    margin-bottom: 25px;
+    transition: 0.3s;
+    line-height: 1.5;
+}
+
+.form_control:focus{
+    border-color: red;
+}
+
+textarea{
+    resize: none;
+    font-family: sans-serif;
+}
+
+.btn{
+    width: 100%;
+    text-align: center;
+}
+
+.btn button{
+    background: darkred;
+    border: 0;
+    padding: 16px 45px;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    transition: 0.4s;
+}
+
+.btn button:hover{
+    background: red;
+}
+
+footer {
+    background-color: darkred;
+    color: black;
+    text-shadow:  1px 1px grey;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    padding: 15px 10px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hotline {
+    margin: 0;
+}
+
+.hotline a {
+    color: #FFFFFF; 
+    text-shadow: 1px 1px red;
+    text-decoration: underline; 
+}
+
+.social-icons {
+    margin-top: 2px;
+}
+
+.social-logo {
+    width: 30px; 
+    height: auto; 
+    margin: 1px;
+    transition: transform 0.3s;
+}
+
+.social-logo:hover {
+    transform: scale(1.1); 
+}
+
+@media screen and (max-width: 1400px) {
+    .container{
+        max-width: 1100px;
+    }
+    .information p{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .container{
+        max-width: 900px;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .container{
+        max-width: 768px;
+        flex-direction: column;
+    }
+
+    .links_container, .input_container{
+        max-width: 100%;
+    }
+
+    .link_item {
+        width: 100%;
+    }
+
+    .links_container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px){
+    section{
+        padding: 50px 5px;
+    }
+
+    .container{
+        max-width: 550px;
+    }
+
+    form .row{
+        flex-direction: column;
+        gap: 0;
+    }
+}
